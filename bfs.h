@@ -3,6 +3,7 @@
 #include <QPushButton>
 #include <QQueue>
 #include <algorithm>
+#include <search.h>
 
 using namespace std;
 
@@ -10,7 +11,7 @@ const int LEN = 362880; //总状态数9！=362880;
 const int dir[4][2] = {{-1, 0},{1, 0},{0, -1},{0, 1}};
 const long int factory[] = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880};
 
-class bfs
+class bfs : public search
 {
 private:
 

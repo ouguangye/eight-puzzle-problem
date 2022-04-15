@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     //init
+    /*
     matrix[0] = ui->pushButton;
     matrix[1] = ui->pushButton_2;
     matrix[2] = ui->pushButton_3;
@@ -17,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     matrix[6] = ui->pushButton_7;
     matrix[7] = ui->pushButton_8;
     matrix[8] = ui->pushButton_9;
+    */
 }
 
 MainWindow::~MainWindow()
