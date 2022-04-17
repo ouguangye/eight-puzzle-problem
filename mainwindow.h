@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include "mysearch.h"
+#include<QVector>
+#include<QLabel>
 using namespace std;
 
 QT_BEGIN_NAMESPACE
@@ -19,7 +21,6 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-
     void on_pushButton_2_clicked();
 
 private:
@@ -28,5 +29,8 @@ private:
     string init_state = "123456780";
     const string goal_state = "123456780";
     MySearch* s;
+    QVector<QLabel*>table;
+private:
+    void setTable(string& s);
 };
 #endif // MAINWINDOW_H
