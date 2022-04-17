@@ -101,25 +101,7 @@ border-radius:5px;</string>
      <string>Please select one of them:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>240</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(92, 124, 250);
-color: rgb(255, 255, 255);
-border-radius:5px;</string>
-    </property>
-    <property name="text">
-     <string>Result</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -169,7 +151,7 @@ border-radius:5px;</string>
           <enum>QFrame::Sunken</enum>
          </property>
          <property name="text">
-          <string>3</string>
+          <string>1</string>
          </property>
          <property name="textFormat">
           <enum>Qt::RichText</enum>
@@ -247,7 +229,7 @@ border-radius:5px;</string>
           <enum>QFrame::Sunken</enum>
          </property>
          <property name="text">
-          <string>1</string>
+          <string>3</string>
          </property>
          <property name="textFormat">
           <enum>Qt::RichText</enum>
@@ -296,7 +278,7 @@ border-radius:5px;</string>
           <enum>QFrame::Sunken</enum>
          </property>
          <property name="text">
-          <string>6</string>
+          <string>4</string>
          </property>
          <property name="textFormat">
           <enum>Qt::RichText</enum>
@@ -374,7 +356,7 @@ border-radius:5px;</string>
           <enum>QFrame::Sunken</enum>
          </property>
          <property name="text">
-          <string>4</string>
+          <string>6</string>
          </property>
          <property name="textFormat">
           <enum>Qt::RichText</enum>
@@ -423,7 +405,7 @@ border-radius:5px;</string>
           <enum>QFrame::Sunken</enum>
          </property>
          <property name="text">
-          <string>0</string>
+          <string>7</string>
          </property>
          <property name="textFormat">
           <enum>Qt::RichText</enum>
@@ -501,7 +483,7 @@ border-radius:5px;</string>
           <enum>QFrame::Sunken</enum>
          </property>
          <property name="text">
-          <string>7</string>
+          <string/>
          </property>
          <property name="textFormat">
           <enum>Qt::RichText</enum>
@@ -518,7 +500,7 @@ border-radius:5px;</string>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -552,13 +534,13 @@ border-radius:5px;</string>
      <item>
       <widget class="QRadioButton" name="radioButton_4">
        <property name="text">
-        <string>Brunch-And-Bound</string>
+        <string>Branch-And-Bound</string>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -568,35 +550,62 @@ border-radius:5px;</string>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
+     <item row="0" column="0" alignment="Qt::AlignHCenter">
       <widget class="QLabel" name="label_12">
        <property name="text">
-        <string>Time(s):</string>
+        <string>Time(ms):</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
+     <item row="0" column="1" alignment="Qt::AlignHCenter">
       <widget class="QLabel" name="label_14">
        <property name="text">
-        <string>6</string>
+        <string>null</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
+     <item row="1" column="0" alignment="Qt::AlignHCenter">
       <widget class="QLabel" name="label_13">
        <property name="text">
         <string>Steps：</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
+     <item row="1" column="1" alignment="Qt::AlignHCenter">
       <widget class="QLabel" name="label_15">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="text">
-        <string>36</string>
+        <string>null</string>
        </property>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>260</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(170, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Result:</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
