@@ -17,6 +17,11 @@ MainWindow::MainWindow(QWidget *parent)
     table.push_back(ui->cell7);
     table.push_back(ui->cell8);
     table.push_back(ui->cell9);
+
+    buttonList.push_back(ui->radioButton);
+    buttonList.push_back(ui->radioButton_2);
+    buttonList.push_back(ui->radioButton_3);
+    buttonList.push_back(ui->radioButton_4);
 }
 
 MainWindow::~MainWindow()
@@ -31,11 +36,34 @@ void MainWindow::on_pushButton_clicked()
     srand((unsigned)time(0));
     random_shuffle(init_state.begin(),init_state.end());
     setTable(init_state);
+    s->setInitState(init_state);
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-
+    ui->stepLabel->setText("");
+    ui->stepLabel->setText("");
+    bool flag = false;
+    for(int i=0;i<4;i++){
+        if(!buttonList[i]->isChecked()) continue;
+        searchType = i;
+        flag = true;
+        break;
+    }
+    if(!flag){
+        QMessageBox box(QMessageBox::Warning,tr("警告"),"please select searching methods ");
+        box.exec();
+        return;
+    }
+    if(!s->isHavingSolution(init_state,goal_state)){
+        QMessageBox::critical(this,tr("err"),"it doesn't have a solution");
+        return;
+    }
+    s->searchHelp(searchType);
+    //setTable(goal_state);
+    ui->stepLabel->setNum(s->getSearchStep());
+    ui->timeLabel->setNum(s->getSearchTime());
+    QMessageBox::information(this,tr("infro"),"solution has been found");
 }
 
 

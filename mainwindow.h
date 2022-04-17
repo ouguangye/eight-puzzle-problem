@@ -4,8 +4,10 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include "mysearch.h"
-#include<QVector>
-#include<QLabel>
+#include <QVector>
+#include <QLabel>
+#include <QMessageBox>
+#include <QRadioButton>
 using namespace std;
 
 QT_BEGIN_NAMESPACE
@@ -25,11 +27,12 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    int searchType;
+    int searchType = 0;
     string init_state = "123456780";
-    const string goal_state = "123456780";
+    string goal_state = "123456780";
     MySearch* s;
     QVector<QLabel*>table;
+    QVector<QRadioButton*> buttonList;
 private:
     void setTable(string& s);
 };
