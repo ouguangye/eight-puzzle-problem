@@ -1,6 +1,5 @@
 # 八数码问题
 
-这里的readme文件我懒得重写一边了，因为实验报告是用英文写的，所以直接复制粘贴过来了，这里用到的是qt5.9
 ## 目的
 To implement the UI for the 8-puzzle problem with Four Strategies of Tree Search Algorithm (The simple game UI)
 
